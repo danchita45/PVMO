@@ -36,10 +36,25 @@ public class inicio extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         p_venta.setText("Punto de venta");
+        p_venta.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                p_ventaActionPerformed(evt);
+            }
+        });
 
         conteo.setText("Conteo");
+        conteo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                conteoActionPerformed(evt);
+            }
+        });
 
         I_mercancia.setText("Ingreso de mercancia");
+        I_mercancia.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                I_mercanciaActionPerformed(evt);
+            }
+        });
 
         salir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconos_e_Imagenes/Imagenes interfaz/Exit.png"))); // NOI18N
 
@@ -87,7 +102,27 @@ public class inicio extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void p_ventaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_p_ventaActionPerformed
+        Punto_venta a =new Punto_venta();
+        a.setVisible(true);
+        this.dispose();
+        
+    }//GEN-LAST:event_p_ventaActionPerformed
+
+    private void conteoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_conteoActionPerformed
+        Conteo a =new Conteo();
+        a.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_conteoActionPerformed
+
+    private void I_mercanciaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_I_mercanciaActionPerformed
+        ingreso_merc a=new ingreso_merc();
+        a.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_I_mercanciaActionPerformed
 
     /**
      * @param args the command line arguments

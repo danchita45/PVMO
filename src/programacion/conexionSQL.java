@@ -4,8 +4,6 @@
  * and open the template in the editor.
  */
 package programacion;
-
-import com.mysql.jdbc.ResultSet;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.Statement;
@@ -22,7 +20,7 @@ public class conexionSQL {
     public Connection conexion(){
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            conectar = DriverManager.getConnection("jdbc:mysql://localhost/bads?user=root&password=");
+            conectar = DriverManager.getConnection("jdbc:mysql://localhost/pv?user=root&password=");
            
             
         } catch (Exception e) {

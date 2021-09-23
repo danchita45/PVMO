@@ -64,6 +64,11 @@ public class Conteo extends javax.swing.JFrame {
         getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(334, 260, 221, 53));
 
         salirconteo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconos_e_Imagenes/Imagenes interfaz/Exit.png"))); // NOI18N
+        salirconteo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                salirconteoActionPerformed(evt);
+            }
+        });
         getContentPane().add(salirconteo, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 10, 45, 40));
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/fm2.gif"))); // NOI18N
@@ -71,11 +76,18 @@ public class Conteo extends javax.swing.JFrame {
         getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 650, 400));
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void salirconteoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_salirconteoActionPerformed
+        inicio a=new inicio();
+        a.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_salirconteoActionPerformed
 
     /**
      * @param args the command line arguments

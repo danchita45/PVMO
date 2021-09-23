@@ -38,7 +38,7 @@ public class Punto_venta extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        getContentPane().setLayout(null);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -53,41 +53,56 @@ public class Punto_venta extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(jTable1);
 
-        getContentPane().add(jScrollPane1);
-        jScrollPane1.setBounds(111, 96, 559, 97);
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(111, 96, 559, 97));
 
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Venta: ");
-        getContentPane().add(jLabel1);
-        jLabel1.setBounds(165, 11, 350, 67);
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(165, 11, 350, 67));
 
         consulta.setText("consultar productos");
-        getContentPane().add(consulta);
-        consulta.setBounds(10, 350, 160, 60);
+        consulta.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                consultaActionPerformed(evt);
+            }
+        });
+        getContentPane().add(consulta, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 350, 160, 60));
 
         eliminar.setText("Eliminar producto");
-        getContentPane().add(eliminar);
-        eliminar.setBounds(180, 350, 151, 60);
+        getContentPane().add(eliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 350, 151, 60));
 
         Cambia_producto.setText("Cambiar");
-        getContentPane().add(Cambia_producto);
-        Cambia_producto.setBounds(340, 350, 150, 60);
+        getContentPane().add(Cambia_producto, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 350, 150, 60));
 
         subtotal.setText("subtotal");
-        getContentPane().add(subtotal);
-        subtotal.setBounds(620, 350, 158, 55);
+        getContentPane().add(subtotal, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 350, 158, 55));
 
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconos_e_Imagenes/Imagenes interfaz/Exit.png"))); // NOI18N
-        getContentPane().add(jButton1);
-        jButton1.setBounds(781, 0, 30, 20);
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(781, 0, 30, 20));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/fm2.gif"))); // NOI18N
         jLabel2.setText("jLabel2");
-        getContentPane().add(jLabel2);
-        jLabel2.setBounds(0, 0, 810, 440);
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 810, 440));
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+       inicio a=new inicio();
+       a.setVisible(true);
+       this.dispose();
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void consultaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_consultaActionPerformed
+        consulta a=new consulta();
+        a.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_consultaActionPerformed
 
     /**
      * @param args the command line arguments
