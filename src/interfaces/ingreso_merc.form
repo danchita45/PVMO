@@ -72,6 +72,9 @@
       </Constraints>
     </Component>
     <Component class="javax.swing.JTextField" name="Ubicaciontxt">
+      <Properties>
+        <Property name="enabled" type="boolean" value="false"/>
+      </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
           <AbsoluteConstraints x="116" y="97" width="110" height="23"/>
@@ -79,6 +82,9 @@
       </Constraints>
     </Component>
     <Component class="javax.swing.JTextField" name="Nombretxt">
+      <Properties>
+        <Property name="enabled" type="boolean" value="false"/>
+      </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
           <AbsoluteConstraints x="116" y="52" width="170" height="23"/>
@@ -140,6 +146,9 @@
       </Constraints>
     </Component>
     <Component class="javax.swing.JTextField" name="preciotxt">
+      <Properties>
+        <Property name="enabled" type="boolean" value="false"/>
+      </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
           <AbsoluteConstraints x="110" y="140" width="130" height="30"/>
@@ -147,6 +156,9 @@
       </Constraints>
     </Component>
     <Component class="javax.swing.JTextField" name="cantidadtxt">
+      <Properties>
+        <Property name="enabled" type="boolean" value="false"/>
+      </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
           <AbsoluteConstraints x="110" y="180" width="80" height="30"/>
