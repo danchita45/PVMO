@@ -24,10 +24,11 @@ public class ingreso_merc extends javax.swing.JFrame {
  
     conexionSQL cc= new conexionSQL();
         Connection con = cc.conexion();
-        
+    
     public ingreso_merc() {
         initComponents();
-        
+    agregar.setVisible(false);
+    agregar_n.setVisible(true);
     }
 
     /**
@@ -38,7 +39,7 @@ public class ingreso_merc extends javax.swing.JFrame {
     
     
     int buscar(){
-          String a= id_productotxt.getText();
+        String a= id_productotxt.getText();
         String sql;
         String psn=new String();
         String psu=new String();
@@ -58,17 +59,19 @@ public class ingreso_merc extends javax.swing.JFrame {
                 psp= rs.getString(3);
                 psc= rs.getString(4);
                 if( psc.equals("")){
+                    
                 Nombretxt.setText(psn);
                 Ubicaciontxt.setText(psu);
                 preciotxt.setText(psp);
                 cantidadtxt.setText(psc);
-                agregarnuevo();
+                
                 }else{
                 Nombretxt.setText(psn);
                 Ubicaciontxt.setText(psu);
                 preciotxt.setText(psp);
                 cantidadtxt.setText(String.valueOf(calcula(psc,JOptionPane.showInputDialog(cantidadtxt, "Ingrese nueva cantidad"))));
-                
+                agregar.setVisible(true);
+                agregar_n.setVisible(false);
                 }
                 
             }
@@ -134,6 +137,7 @@ public class ingreso_merc extends javax.swing.JFrame {
         preciotxt = new javax.swing.JTextField();
         cantidadtxt = new javax.swing.JTextField();
         Buscar = new javax.swing.JButton();
+        agregar_n = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -186,6 +190,11 @@ public class ingreso_merc extends javax.swing.JFrame {
         getContentPane().add(preciotxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 140, 130, 30));
 
         cantidadtxt.setEnabled(false);
+        cantidadtxt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cantidadtxtActionPerformed(evt);
+            }
+        });
         getContentPane().add(cantidadtxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 180, 80, 30));
 
         Buscar.setText("Buscar");
@@ -195,6 +204,14 @@ public class ingreso_merc extends javax.swing.JFrame {
             }
         });
         getContentPane().add(Buscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 270, 140, 40));
+
+        agregar_n.setText("agregar nuevo");
+        agregar_n.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                agregar_nActionPerformed(evt);
+            }
+        });
+        getContentPane().add(agregar_n, new org.netbeans.lib.awtextra.AbsoluteConstraints(395, 270, 176, 40));
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/fm2.gif"))); // NOI18N
         jLabel4.setText("jLabel4");
@@ -223,6 +240,14 @@ public class ingreso_merc extends javax.swing.JFrame {
       preciotxt.setEnabled(true);
       
     }//GEN-LAST:event_BuscarActionPerformed
+
+    private void agregar_nActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_agregar_nActionPerformed
+        agregarnuevo();
+    }//GEN-LAST:event_agregar_nActionPerformed
+
+    private void cantidadtxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cantidadtxtActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cantidadtxtActionPerformed
 
     /**
      * @param args the command line arguments
@@ -264,6 +289,7 @@ public class ingreso_merc extends javax.swing.JFrame {
     private javax.swing.JTextField Nombretxt;
     private javax.swing.JTextField Ubicaciontxt;
     private javax.swing.JButton agregar;
+    private javax.swing.JButton agregar_n;
     private javax.swing.JTextField cantidadtxt;
     private javax.swing.JTextField id_productotxt;
     private javax.swing.JButton jButton1;

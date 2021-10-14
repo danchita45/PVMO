@@ -95,7 +95,7 @@ public class Conteo extends javax.swing.JFrame {
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("cuenta fisica");
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(44, 140, 104, 39));
-        getContentPane().add(c_fisica, new org.netbeans.lib.awtextra.AbsoluteConstraints(166, 140, 235, 39));
+        getContentPane().add(c_fisica, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 140, 235, 39));
 
         Verificar.setText("Verificar");
         Verificar.addActionListener(new java.awt.event.ActionListener() {
